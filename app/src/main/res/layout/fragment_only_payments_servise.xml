@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".only_payments_servise"
+    android:background="@color/backgroundActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:padding="40dp">
+
+            <ListView
+                android:id="@+id/inputedArr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/transparent_background"></ListView>
+
+
+            <Switch
+                android:id="@+id/switcher"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:minHeight="60dp"
+                android:text="Ежемесячный автоплатеж"
+                android:theme="@style/SwitchCompatTheme"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+           
+            <LinearLayout
+                android:id="@+id/mounthPays"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/textAutoPayMonts"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/whiteText"
+                    android:background="@drawable/button_indigo_defoult"
+                    android:minHeight="40dp"
+                    android:text="1 день месяца"
+                    android:onClick="showedPop"
+                    android:textColor="@color/whiteText"
+                    tools:ignore="OnClick" />
+                <EditText
+                    android:id="@+id/summedAutoPayts"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/style_inputs2"
+                    android:hint="Сумма"
+                    android:inputType="number"
+                    android:selectAllOnFocus="false"
+                    android:typeface="monospace" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/buttonSendMoney"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_indigo_defoult"
+                android:minHeight="40dp"
+                android:text="Оплатить"
+                android:textColor="@color/whiteText" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/indigo"
+
+            android:theme="@style/AppThemeIndigo"
+            app:subtitleTextColor="@color/whiteText"
+            app:titleTextColor="@color/whiteText"></androidx.appcompat.widget.Toolbar>
+    </FrameLayout>
+</FrameLayout>

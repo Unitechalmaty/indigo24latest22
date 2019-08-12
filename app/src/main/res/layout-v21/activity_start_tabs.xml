@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundActivity"
+    tools:context=".startTabs"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <fragment
+        android:id="@+id/fr_place"
+        android:name="com.example.indigo24.chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        tools:ignore="MissingConstraints"
+        tools:layout="@layout/fragment_chat" />
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_weight="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0.5dp"
+        android:clipChildren="false"
+        android:foregroundGravity="bottom"
+        android:hapticFeedbackEnabled="true"
+        android:importantForAccessibility="3"
+        android:isScrollContainer="true"
+        android:longClickable="true"
+        android:visibility="visible"
+        android:outlineSpotShadowColor="@color/colorPrimaryDark"
+        android:padding="10dp"
+        android:background="@drawable/button_bg_rounded_corners"
+        app:itemHorizontalTranslationEnabled="false"
+        app:itemIconSize="29dp"
+        app:itemTextAppearanceActive="@style/TextAppearance.MaterialComponents.Subtitle2"
+        app:itemTextAppearanceInactive="@style/Widget.Design.TabLayout"
+        app:itemTextColor="@color/activeBtn"
+        app:itemIconTint="#5d5d5d"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircleRadius="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" tools:targetApi="p" />
+</LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/showKvit"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <FrameLayout
+            android:id="@+id/backKvit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_dark"
+            android:alpha="0.8"
+            android:paddingHorizontal="70dp"
+            android:paddingVertical="70dp"
+            android:layout_gravity="center">
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="70dp"
+            android:layout_gravity="center">
+            <FrameLayout
+                android:layout_width="300dp"
+                android:layout_height="400dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_back_for_kvit">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_marginTop="40dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="91dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity=""
+                            app:srcCompat="@drawable/ic_logoindigo" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="91dp"
+
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/titleKvit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textGray"
+                            android:text="Перевод на кошелек"/>
+                        <TextView
+                            android:id="@+id/descKvit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textGrayLight"
+                            android:text="Перевод пользователю виктор."/>
+                        <TextView
+                            android:id="@+id/dateKvit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:textColor="@color/textGrayLight"
+                            android:text="11.04.2019 12:36"/>
+
+
+                        <TextView
+                            android:id="@+id/summKvit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textGray"
+                            android:text="2000 тг"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="91dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity=""
+                            app:srcCompat="@drawable/ic_barcoder" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:foregroundGravity="center"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+                        <ImageButton
+                            android:id="@+id/pdfKvit"
+                            android:layout_width="25dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_iconpdf"
+                            android:background="@drawable/button_bg_transparent"
+                            android:scaleType="fitCenter"
+                            android:layout_gravity="center"
+                            />
+                        <ImageButton
+                            android:id="@+id/shareKvit"
+                            android:layout_width="25dp"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_share_kvit"
+                            android:background="@drawable/button_bg_transparent"
+                            android:scaleType="fitCenter"
+                            android:layout_gravity="center"
+                            />
+                    </LinearLayout>
+                </FrameLayout>
+            </FrameLayout>
+
+        </FrameLayout>
+    </FrameLayout>
+
+
+
+
+
+</FrameLayout>

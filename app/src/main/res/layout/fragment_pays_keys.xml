@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".addBalancedFragments">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipePullRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- TODO: Update blank fragment layout -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="29dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/textGray"
+                        android:textSize="18sp" />
+
+                    <ImageButton
+                        android:id="@+id/barCodeClick"
+                        style="@android:style/Widget.Material.Light.ImageButton"
+                        android:layout_width="29dp"
+                        android:layout_height="34dp"
+                        android:background="@color/backgroundActivity"
+                        app:srcCompat="@drawable/ic_qr_icon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:targetApi="lollipop" />
+                </LinearLayout>
+
+                //Кредитка + курсы валют
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="215dp"
+                    android:background="@drawable/round_pay_cards"
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20sp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:alpha="0.7"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="Доступный баланс"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/whiteText" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/balanceDostup"
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="6dp"
+                                    app:srcCompat="@drawable/ic_tgsim" />
+
+                                <TextView
+                                    android:id="@+id/blanceSumm"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:textColor="@color/whiteText" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:textAlignment="textEnd"
+                            android:layout_gravity="end">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:alpha="0.7"
+                                android:gravity="right"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="Баланс в блоке"
+                                android:textColor="@color/whiteText" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="right"
+                                android:gravity="end">
+
+                                <ImageView
+                                    android:id="@+id/balanceBlock"
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="6dp"
+                                    app:srcCompat="@drawable/ic_tgsim" />
+
+                                <TextView
+                                    android:id="@+id/blockSumm"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:textColor="@color/whiteText" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <Button
+                                android:id="@+id/addBalance"
+                                android:layout_width="126dp"
+                                android:layout_height="42dp"
+                                android:background="@drawable/button_add_balance"
+                                android:text="Пополнить"
+                                android:textColor="@android:color/white"
+                                android:textSize="10sp"
+                                android:layout_gravity="left"/>
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                            <Button
+                                android:id="@+id/vivodButton"
+                                android:layout_width="126dp"
+                                android:layout_height="39dp"
+                                android:background="@drawable/button_oute_balance_right"
+                                android:text="Вывести"
+                                android:textColor="@android:color/white"
+                                android:textSize="10sp"
+                                android:layout_gravity="end"/>
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:background="@drawable/back_tocar_bottom"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:textAlignment="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="40dp"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:id="@+id/selectedVutesTG"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:layout_weight="0"
+                                android:background="@android:color/transparent"
+                                app:srcCompat="@drawable/ic_tg" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="7dp"
+                                android:layout_weight="0"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/roboto_medium"
+                                android:textColor="@color/textGray"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="40dp"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:id="@+id/selectedValutesDollars"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:background="@android:color/transparent"
+                                app:srcCompat="@drawable/ic_dollars" />
+
+                            <TextView
+                                android:id="@+id/courseDollar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="7dp"
+                                android:layout_weight="0"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/roboto_medium"
+                                android:textColor="@color/textGray"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:textAlignment="center"
+                            android:layout_marginEnd="40dp"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:id="@+id/selectedValutesRuble"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:background="@drawable/transparent_background"
+                                app:srcCompat="@drawable/ic_rb" />
+
+                            <TextView
+                                android:id="@+id/courseRuble"
+                                android:layout_width="match_parent"
+                                android:layout_height="14dp"
+                                android:layout_weight="0"
+                                android:fontFamily="@font/roboto_medium"
+                                android:textAlignment="center"
+                                android:textColor="@color/textGray"
+                                android:textSize="10sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:id="@+id/selectedValutesEuro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                app:srcCompat="@drawable/ic_eur" />
+
+                            <TextView
+                                android:id="@+id/courseEuro"
+                                android:layout_width="match_parent"
+                                android:layout_height="14dp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:textAlignment="center"
+                                android:textColor="@color/textGray"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </FrameLayout>
+                //Кредитка + курсы валют
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/back_tocar_bottom"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/listSliderPayments"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layoutAnimation="@anim/layout_animation_fall_down"
+                        android:layout_marginTop="4dp"
+                        android:paddingRight="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:minHeight="74dp"
+                        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+                    <Button
+                        android:id="@+id/open_all_servicess"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/round_pay_cards2"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Все сервисы"
+                        android:layout_gravity="bottom"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/click_open_pays2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/back_tocar_bottom"
+                        android:drawableRight="@drawable/ic_add_pay"
+                        android:fontFamily="@font/roboto_medium"
+                        android:paddingStart="7dp"
+                        android:paddingEnd="20dp"
+                        android:text="Совершить платеж"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/textGray"
+                        android:textSize="14sp"
+                        tools:ignore="DuplicateIds" />
+
+                    <Button
+                        android:id="@+id/tranzactionButton"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/back_tocar_bottom"
+                        android:drawableRight="@drawable/ic_historytranzaction"
+                        android:paddingStart="7dp"
+                        android:paddingEnd="20dp"
+                        android:text="История транзакций"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/textGray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/click_open_pays"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/back_tocar_bottom"
+                        android:drawableRight="@drawable/ic_kvit"
+                        android:paddingStart="7dp"
+                        android:paddingEnd="20dp"
+                        android:text="Квитанции"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/textGray"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/selectContactsButton"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/back_tocar_bottom"
+                        android:drawableRight="@drawable/ic_send_money"
+                        android:paddingStart="7dp"
+                        android:paddingEnd="20dp"
+                        android:text="Отправить деньги"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/textGray"
+                        android:textSize="14sp"
+                        tools:ignore="DuplicateIds" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</FrameLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".allPays">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:background="@color/indigo"
+            android:layout_weight="0"
+            app:titleTextColor="@color/whiteText"
+            app:subtitleTextColor="@color/whiteText"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppThemeIndigo"></androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_weight="0">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabsPays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@drawable/tabs_tranzaction"
+                android:textAlignment="textStart"
+                android:textSize="12dp"
+                app:tabBackground="@drawable/tab_layout_selector"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/whiteBack"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorGravity="top"
+                app:tabIndicatorHeight="0dp"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/whiteBack"
+                app:tabTextAppearance="@style/MineCustomTabText"
+                app:tabTextColor="@color/textGray"
+                tools:ignore="MissingConstraints" />
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viepage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+</FrameLayout>

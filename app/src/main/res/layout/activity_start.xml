@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".startActivity">
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="top"
+        android:padding="50dp">
+
+        <ImageView
+            android:id="@+id/iconStart1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_help1"
+            tools:ignore="VectorDrawableCompat" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/descStart1"
+        android:layout_width="match_parent"
+        android:layout_weight="0"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/background_start_help1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/titleStart"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="22sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeStepGranularity="2sp"
+                android:layout_weight="0"
+                android:layout_marginBottom="20sp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/whiteText"
+                android:text="Единый кошелек для всех платежей"/>
+
+            <TextView
+                android:id="@+id/subTitleStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/whiteText"
+                android:text="Моментальный ввод и вывод денег в любой точке мира"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20sp">
+
+                <Button
+                    android:id="@+id/slideInd1"
+                    android:layout_width="72px"
+                    android:layout_height="22px"
+                    android:layout_marginRight="4sp"
+                    android:layout_marginTop="22dp"
+                    android:background="@drawable/punctir_active"
+                    android:orientation="horizontal"></Button>
+
+                <Button
+                    android:id="@+id/slideInd2"
+                    android:layout_width="22px"
+                    android:layout_height="22px"
+                    android:background="@drawable/punctir"
+                    android:layout_marginRight="4sp"
+                    android:layout_marginTop="22dp"
+                    android:orientation="horizontal"></Button>
+
+                <Button
+                    android:id="@+id/slideInd3"
+                    android:layout_width="22px"
+                    android:layout_height="22px"
+                    android:background="@drawable/punctir"
+                    android:layout_marginRight="4sp"
+                    android:layout_marginTop="22dp"
+                    android:orientation="horizontal"></Button>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right">
+
+                    <ImageButton
+                        android:id="@+id/clickNexStart"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="right|end"
+                        android:layout_marginEnd="0sp"
+                        android:layout_marginRight="0sp"
+                        android:background="@drawable/background_btn_start"
+                        android:cropToPadding="true"
+                        android:padding="13sp"
+                        android:saveEnabled="false"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ic_arrow_right"
+                        android:tint="#338BBF"
+                        android:verticalScrollbarPosition="right" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

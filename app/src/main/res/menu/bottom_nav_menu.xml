@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/ic_iconchat"
+        android:title="@string/title_chat" />
+
+    <item
+        android:id="@+id/navigation_lenta"
+        android:icon="@drawable/ic_lenta"
+        android:title="@string/title_lenta" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/title_profile" />
+
+
+    <item
+        android:id="@+id/navigation_pays"
+        android:icon="@drawable/ic_pays"
+        android:title="@string/title_pays" />
+
+</menu>

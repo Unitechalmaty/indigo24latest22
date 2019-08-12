@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">indigo24 latest</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_autorization">Авторизация</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_start_tabs">startTabs</string>
+    <string name="title_chat">Чат</string>
+    <string name="title_lenta">Лента</string>
+    <string name="title_profile">Профиль</string>
+    <string name="title_pays">Кошелек</string>
+    <string name="helowPays">Здравствуйте</string>
+    <string name="helowPaysName">Александр</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_tranzaction">tranzaction</string>
+    <string name="tab_text_1">Все</string>
+    <string name="tab_text_2">Переводы</string>
+    <string name="tab_text_3">Платежи</string>
+    <string name="tab_text_4">Пополнения</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_trazaction">trazaction</string>
+    <string name="title_activity_paysCat">Платежи</string>
+    <string name="title_activity_barcode_scanner">Сканнер штрих кода</string>
+    <string name="textForScanner">Поместите штрих код в центр экрана</string>
+    <string name="textForAddBalnce">Пополнение баланса</string>
+    <string name="textForAddVivod">Вывод баланса</string>
+    <string name="mobilePays">Пополнение баланса</string>
+    <string name="activePays">Altel 4G</string>
+    <string name="paysOnayTo">Onay</string>
+    <string name="shopTitle">Магазин</string>
+    <string name="SelectContactsTitle">Выбор контактов</string>
+</resources>

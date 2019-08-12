@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_constraintBottom_toTopOf="parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="1dp"
+    android:layout_weight="1"
+    android:background="@color/whiteBack"
+    android:paddingLeft="20dp"
+    android:paddingTop="10dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/clickToOad">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1">
+
+
+
+            <ImageView
+                android:id="@+id/iconForListing"
+                app:srcCompat="@drawable/ic_altel"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_weight="0"
+                tools:ignore="VectorDrawableCompat" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/namePaysed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:text="dsafdsf"
+                    android:textColor="@color/textGray"
+                    android:textSize="18dp" />
+                <TextView
+                    android:id="@+id/defoultId"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/textGray"
+                    android:textSize="8dp" />
+                <TextView
+                    android:id="@+id/txtSumm"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/textGray"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+
+
+            <ImageButton
+                android:id="@+id/clickPopUp"
+                android:layout_width="wrap_content"
+                android:background="@drawable/transparent_background"
+                android:maxWidth="25dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                app:srcCompat="@drawable/ic_show_more_button_with_three_dots" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

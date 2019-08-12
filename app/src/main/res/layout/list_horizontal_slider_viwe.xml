@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginRight="10dp"
+    android:orientation="horizontal">
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iamgeHorizontalList"
+            android:maxWidth="50dp"
+            android:minWidth="50dp"
+            android:minHeight="50dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_altel_big"
+            android:maxHeight="50dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textHorizontalSlider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="fdgdfg"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/textGray"
+            android:textAlignment="center"
+            android:textSize="10dp" />
+    </LinearLayout>
+</RelativeLayout>
